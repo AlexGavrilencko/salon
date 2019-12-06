@@ -14,6 +14,7 @@ class m191125_040704_create_master_table extends Migration
     {
         $this->createTable('{{%master}}', [
             'id' => $this->primaryKey(),
+            'name' => $this->string()// название
         ]);
     }
 

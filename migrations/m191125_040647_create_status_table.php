@@ -14,6 +14,7 @@ class m191125_040647_create_status_table extends Migration
     {
         $this->createTable('{{%status}}', [
             'id' => $this->primaryKey(),
+            'name' => $this->string() // название
         ]);
     }
 

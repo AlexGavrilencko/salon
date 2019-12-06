@@ -14,6 +14,11 @@ class m191125_040658_create_services_table extends Migration
     {
         $this->createTable('{{%services}}', [
             'id' => $this->primaryKey(),
+            'name' => $this->string(),// название
+            'data_time' => $this->date(),// время и дата
+            'number of seats' => $this->integer(),// количество мест
+            'praise' => $this->integer(),// цена
+            'id_master' => $this->integer()// id мастера
         ]);
     }
 
