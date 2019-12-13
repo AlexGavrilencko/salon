@@ -38,14 +38,17 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
+            ['label' => 'Home', 'url' => ['/admin/default/index']],
+            ['label' => 'User', 'url' => ['/admin/user/index']],
+            ['label' => 'Master', 'url' => ['/admin/master/index']],
+            ['label' => 'Record', 'url' => ['/admin/record/index']],
+            ['label' => 'Services', 'url' => ['/admin/services/index']],
+            ['label' => 'Status', 'url' => ['/admin/status/index']],
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/auth/login']]
+            ['label' => 'Login', 'url' => ['/site/login']]
             ) : (
                 '<li>'
-                . Html::beginForm(['/auth/logout'], 'post')
+                . Html::beginForm(['/site/logout'], 'post')
                 . Html::submitButton(
                     'Logout (' . Yii::$app->user->identity->username . ')',
                     ['class' => 'btn btn-link logout']
@@ -79,3 +82,4 @@ AppAsset::register($this);
 </body>
 </html>
 <?php $this->endPage() ?>
+
